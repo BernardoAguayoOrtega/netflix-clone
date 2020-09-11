@@ -1,22 +1,24 @@
 //import styled component
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 //create and import card container
 export const Card = styled.div`
+	padding: 1rem;
+`;
 
-`
-
-//create and import ListOfCards 
+//create and import ListOfCards
 export const ListOfCards = styled.div`
-  display: flex;
-`
+	display: flex;
+`;
 
-//create and import ImageContainer 
-export const ImageContainer = styled.figure`
-  max-width: 1rem;
-`
+//create and import ImageContainer
+export const PosterContainer = styled.figure`
+	max-width: 10rem;
+`;
 
-//create and import Image 
-export const Image = styled.img`
-  
-`
+//create and import Image
+export const Poster = styled.img`
+	object-fit: contain;
+	width: 100%;
+	height: 10rem;
+`;

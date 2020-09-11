@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import instance const
 import { instance, baseUrl } from '../../utils/request';
 //import styled component
-import { Card, ListOfCards, ImageContainer, Image } from './styles';
+import { Card, ListOfCards, Poster, PosterContainer } from './styles';
 
 //create and export Row component
 export const Row = ({ title, fetchUrl }) => {
@@ -27,8 +27,6 @@ export const Row = ({ title, fetchUrl }) => {
 		fetchData();
 	}, [fetchUrl]);
 
-	console.table(movies);
-
 	return (
 		<>
 			{/*Title*/}
@@ -40,14 +38,14 @@ export const Row = ({ title, fetchUrl }) => {
 					<Card key={i}>
 						{/*Card component*/}
 						<p>{movie.name ? movie.name : movie.title}</p>
-            {/*Image container styled component*/}
-						<ImageContainer>
-              {/*Image styled component*/}
-							<Image
+						{/*Image container styled component*/}
+						<PosterContainer>
+							{/*Image styled component*/}
+							<Poster
 								src={`${baseUrl}${movie.poster_path}`}
 								alt={movie.name ? movie.name : movie.title}
 							/>
-						</ImageContainer>
+						</PosterContainer>
 					</Card>
 				))}
 			</ListOfCards>

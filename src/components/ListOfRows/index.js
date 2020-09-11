@@ -9,8 +9,8 @@ import { requests } from '../../utils/request';
 export const ListOfRows = () => {
   return(
     <>
-      <Row title='I am the row component number 1' fetchUrl={requests.fetchNetflixOriginals} />
-      <Row title='I am the row component number 2' fetchUrl={requests.fetchTrending} />
+      <Row title='Netflix Originals' fetchUrl={requests.fetchNetflixOriginals} />
+      <Row title='Trending' fetchUrl={requests.fetchTrending} />
     </>
   )
 }
