@@ -26,10 +26,6 @@ Just for improve my react skills
     cd README.md
     npm install
     npm start
-
-## Usage
-
-Show how to use the project or library.
     
 ## Reference
 
