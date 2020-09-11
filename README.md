@@ -1,6 +1,10 @@
 # netflix-clone
 Just a netflix clone created with react.js and tmdb, also firebase
 
+## How te see it?
+
+Go to [netflix-clone](https://bernardoaguayoortega.github.io/netflix-clone/) to see it.
+
 ## technologies used
 
 + [React js](https://reactjs.org/)
@@ -18,7 +22,7 @@ Just for improve my react skills
 
 ## Installation or Getting Started
 
-	git clone https://github.com/Jasonnor/README.md.git
+	git clone https://github.com/BernardoAguayoOrtega/netflix-clone/
     cd README.md
     npm install
     npm start
@@ -40,4 +44,4 @@ Please make sure to update tests as appropriate.
 
 ## License
 
-A short snippet describing the license ([MIT](http://opensource.org/licenses/mit-license.php), [Apache](http://opensource.org/licenses/Apache-2.0), etc.)
+([MIT](http://opensource.org/licenses/mit-license.php))
