@@ -6,14 +6,16 @@ import { render } from 'react-dom';
 import { App } from './components/App';
 //import serviceWorker
 import * as serviceWorker from './serviceWorker';
+//import context provider
+import { ContextProvider } from './utils/Contex';
 
 //root const
 const root = document.getElementById('root');
 
 render(
-	<React.StrictMode>
+	<ContextProvider>
 		<App />
-	</React.StrictMode>,
+	</ContextProvider>,
 	root,
 );
 
