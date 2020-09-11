@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 //import instance const
 import { instance } from '../../utils/request';
+//import styled component
+import { Card, ListOfCards } from './styles';
 
 //create and export Row component
 export const Row = ({ title, fetchUrl }) => {
@@ -23,16 +25,28 @@ export const Row = ({ title, fetchUrl }) => {
 		};
 
 		fetchData();
-  }, [fetchUrl]);
-  
-  console.dir(movies)
+	}, [fetchUrl]);
+
+	console.table(movies);
 
 	return (
 		<>
+			{/*Title*/}
 			<h1>{title}</h1>
-			{movies.map((movie) => (
-				<p>{movie.name ? movie.name : movie.title}</p>
-			))}
+      {/*List of cards component*/}
+			<ListOfCards>
+				{/*Map and return some component*/}
+				{movies.map((movie, i) => (
+					<Card key={i}>
+						{/*Card component*/}
+						<p>{movie.name ? movie.name : movie.title}</p>
+						<img
+							src={movie.poster_path}
+							alt={movie.name ? movie.name : movie.title}
+						/>
+					</Card>
+				))}
+			</ListOfCards>
 		</>
 	);
 };
