@@ -9,7 +9,7 @@ Go to [netflix-clone](https://bernardoaguayoortega.github.io/netflix-clone/) to 
 
 + [React js](https://reactjs.org/)
 + [firebase](https://firebase.google.com/)
-+ [tmdb] (https://developers.themoviedb.org/3/getting-started/introduction)
++ [tmdb](https://developers.themoviedb.org/3/getting-started/introduction)
 
 ## Motivation
 
