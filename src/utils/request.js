@@ -10,3 +10,6 @@ export const requests = {
 	fetchRomanceMovies: `/discover/movie?api_key=${API_KEY}&with_genres=10749`,
 	FetchDocumentaries: `/discover/movie?api_key=${API_KEY}&with_genres=99`,
 };
+
+//base url to make requests to the movie database and also export it 
+export const instance = (request) => fetch(`https://api.themoviedb.org/3${request}`);
