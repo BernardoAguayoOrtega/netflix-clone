@@ -1,0 +1,10 @@
+/*reset default styles*/
+*{
+  padding:0;
+  margin: 0;
+}
+
+/*set the rem value*/
+html{
+  font-size: 10px;
+}

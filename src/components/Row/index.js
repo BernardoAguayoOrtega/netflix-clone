@@ -1,9 +1,9 @@
 //import React and its hooks
 import React, { useState, useEffect } from 'react';
 //import instance const
-import { instance } from '../../utils/request';
+import { instance, baseUrl } from '../../utils/request';
 //import styled component
-import { Card, ListOfCards } from './styles';
+import { Card, ListOfCards, ImageContainer, Image } from './styles';
 
 //create and export Row component
 export const Row = ({ title, fetchUrl }) => {
@@ -33,17 +33,21 @@ export const Row = ({ title, fetchUrl }) => {
 		<>
 			{/*Title*/}
 			<h1>{title}</h1>
-      {/*List of cards component*/}
+			{/*List of cards component*/}
 			<ListOfCards>
 				{/*Map and return some component*/}
 				{movies.map((movie, i) => (
 					<Card key={i}>
 						{/*Card component*/}
 						<p>{movie.name ? movie.name : movie.title}</p>
-						<img
-							src={movie.poster_path}
-							alt={movie.name ? movie.name : movie.title}
-						/>
+            {/*Image container styled component*/}
+						<ImageContainer>
+              {/*Image styled component*/}
+							<Image
+								src={`${baseUrl}${movie.poster_path}`}
+								alt={movie.name ? movie.name : movie.title}
+							/>
+						</ImageContainer>
 					</Card>
 				))}
 			</ListOfCards>

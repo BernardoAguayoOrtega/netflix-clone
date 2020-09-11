@@ -8,6 +8,8 @@ import { App } from './components/App';
 import * as serviceWorker from './serviceWorker';
 //import context provider
 import { ContextProvider } from './utils/Contex';
+//import global styles
+import './GlobalStyles.css'
 
 //root const
 const root = document.getElementById('root');

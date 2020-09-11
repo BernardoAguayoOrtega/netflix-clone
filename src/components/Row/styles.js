@@ -6,7 +6,17 @@ export const Card = styled.div`
 
 `
 
-//create and import card container
+//create and import ListOfCards 
 export const ListOfCards = styled.div`
   display: flex;
+`
+
+//create and import ImageContainer 
+export const ImageContainer = styled.figure`
+  max-width: 1rem;
+`
+
+//create and import Image 
+export const Image = styled.img`
+  
 `
