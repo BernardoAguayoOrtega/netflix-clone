@@ -35,9 +35,9 @@ export const Row = ({ title, fetchUrl }) => {
 			<h1>{title}</h1>
 			{/*List of cards component*/}
 			<ListOfCards>
-				{movies.map((movie, i) => (
+				{movies.map((movie) => (
 					<Poster
-						key={i}
+						key={movie.id}
 						src={`${baseUrl}${movie.poster_path}`}
 						alt={movie.name ? movie.name : movie.title}
 					/>
