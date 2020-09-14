@@ -27,6 +27,8 @@ export const Row = ({ title, fetchUrl }) => {
 		fetchData();
 	}, [fetchUrl]);
 
+	console.table(movies);
+
 	return (
 		<>
 			{/*Title*/}

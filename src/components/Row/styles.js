@@ -4,6 +4,13 @@ import styled from 'styled-components';
 //create and import ListOfCards
 export const ListOfCards = styled.div`
 	display: flex;
+	overflow-y: hidden;
+	overflow-x: scroll;
+	padding: 2rem;
+
+	::-webkit-scrollbar {
+		display: none;
+	}
 `;
 
 //create and import Image
