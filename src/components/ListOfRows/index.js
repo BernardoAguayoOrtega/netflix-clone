@@ -12,6 +12,7 @@ export const ListOfRows = () => {
 			<Row
 				title='Netflix Originals'
 				fetchUrl={requests.fetchNetflixOriginals}
+				isLargeRow={true}
 			/>
 			<Row title='Trending' fetchUrl={requests.fetchTrending} />
 			<Row title='Top Rated' fetchUrl={requests.fetchTopRated} />

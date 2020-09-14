@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react';
 //import instance const
 import { instance, baseUrl } from '../../utils/request';
 //import styled component
-import { ListOfCards, Poster } from './styles';
+import { ListOfCards, Poster, Title } from './styles';
 
 //create and export Row component
-export const Row = ({ title, fetchUrl }) => {
+export const Row = ({ title, fetchUrl, isLargeRow }) => {
 	//use state hook
 	const [movies, SetMovies] = useState([]);
 
@@ -32,13 +32,15 @@ export const Row = ({ title, fetchUrl }) => {
 	return (
 		<>
 			{/*Title*/}
-			<h1>{title}</h1>
+			<Title>{title}</Title>
 			{/*List of cards component*/}
 			<ListOfCards>
 				{movies.map((movie) => (
 					<Poster
 						key={movie.id}
-						src={`${baseUrl}${movie.poster_path}`}
+						src={`${baseUrl}${
+							isLargeRow ? movie.poster_path : movie.backdrop_path
+						}`}
 						alt={movie.name ? movie.name : movie.title}
 					/>
 				))}

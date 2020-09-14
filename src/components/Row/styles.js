@@ -24,3 +24,8 @@ export const Poster = styled.img`
 		transform: scale(1.1);
 	}
 `;
+
+//create and import Image
+export const Title = styled.h2`
+	text-align: center;
+`;
