@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 //import the request
 import { instance, requests } from '../../utils/request';
+//import styled components
+import { Header } from './styles';
 
 //create and export banner component into a functional component
 export const Banner = () => {
@@ -32,14 +34,14 @@ export const Banner = () => {
 		return () => clearInterval(interval);
 	}, []);
 
-	console.log(movie);
+	console.log(movie.backdrop_path);
 
 	return (
-		<header>
-			{/*image background*/}
+		<Header image={movie.backdrop_path}>
 			{/*Title*/}
+			<h1>Hey there!!!!!</h1>
 			{/*div > 2 buttons*/}
 			{/*description*/}
-		</header>
+		</Header>
 	);
 };
