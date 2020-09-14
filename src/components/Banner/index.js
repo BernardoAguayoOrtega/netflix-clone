@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 //import the request
 import { instance, requests } from '../../utils/request';
 //import styled components
-import { Header } from './styles';
+import { Header, Buttons, Button, Description } from './styles';
 
 //create and export banner component into a functional component
 export const Banner = () => {
@@ -39,9 +39,14 @@ export const Banner = () => {
 	return (
 		<Header image={movie.backdrop_path}>
 			{/*Title*/}
-			<h1>Hey there!!!!!</h1>
+			<h1>{movie?.title || movie?.name || movie?.original_name}</h1>
 			{/*div > 2 buttons*/}
+			<Buttons>
+				<Button>Play</Button>
+				<Button>My list</Button>
+			</Buttons>
 			{/*description*/}
+			<Description>{movie?.overview}</Description>
 		</Header>
 	);
 };
