@@ -5,12 +5,15 @@ import { baseUrl } from '../../utils/request';
 
 //create and export header component
 export const Header = styled.header`
-	background-size: cover;
 	${({ image }) =>
 		image &&
 		css`
-			background: url(${baseUrl}${image});
+			background: url(${baseUrl}${image}) no-repeat;
 		`};
+
+	background-size: cover;
+	object-fit: contain;
+	height: 45rem;
 `;
 
 //create and export buttons component
