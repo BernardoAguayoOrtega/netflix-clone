@@ -21,6 +21,7 @@ export const Poster = styled.img`
 		isLargeRow === true
 			? css`
 					max-width: 25rem;
+					transform: scale(1.1);
 			  `
 			: css`
 					max-width: 15rem;
@@ -29,11 +30,12 @@ export const Poster = styled.img`
 	transition: transform 450ms;
 
 	:hover {
-		transform: scale(1.1);
+		transform: scale(1.08);
 	}
 `;
 
 //create and import Image
 export const Title = styled.h2`
 	text-align: center;
+	color: white;
 `;
