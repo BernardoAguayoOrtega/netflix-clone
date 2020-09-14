@@ -15,10 +15,24 @@ export const Banner = () => {
 	 */
 	useEffect(() => {
 		async function fetchData() {
-			const request = await instance(requests.fetchNetflixOriginals);
+			const request = await instance(requests.fetchNetflixOriginals)
+				.then((result) => result.json())
+				.then((data) => data.results);
+			setMovie(request[Math.floor(Math.random() * request.length)]);
 		}
+
 		fetchData();
 	}, [isChange]);
+
+	//set interval
+	useEffect(() => {
+		const interval = setInterval(() => {
+			setIsChange((number) => number + 1);
+		}, 1000 * 30);
+		return () => clearInterval(interval);
+	}, []);
+
+	console.log(movie);
 
 	return (
 		<header>
