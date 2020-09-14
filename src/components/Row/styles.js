@@ -39,4 +39,8 @@ export const Title = styled.h2`
 	text-align: center;
 	color: white;
 	font-size: 4rem;
+
+	@media screen and (max-width: 600px) {
+		font-size: 1.5rem;
+	}
 `;

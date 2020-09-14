@@ -46,6 +46,7 @@ export const Description = styled.h2`
 	line-height: 1.3;
 	padding-top: 1rem;
 	font-size: 1.5rem;
+	max-width: 60%;
 `;
 
 //create and export button component
