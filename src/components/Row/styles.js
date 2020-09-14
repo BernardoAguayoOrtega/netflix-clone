@@ -38,4 +38,5 @@ export const Poster = styled.img`
 export const Title = styled.h2`
 	text-align: center;
 	color: white;
+	font-size: 4rem;
 `;
