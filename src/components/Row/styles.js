@@ -11,6 +11,11 @@ export const ListOfCards = styled.div`
 	::-webkit-scrollbar {
 		display: none;
 	}
+
+	@media screen and (max-width: 600px) {
+		display: grid !important;
+		grid-template-columns: 1fr 1fr 1fr 1fr !important;
+	}
 `;
 
 //create and import Image
@@ -32,6 +37,10 @@ export const Poster = styled.img`
 	:hover {
 		transform: scale(1.08);
 	}
+
+	@media screen and (max-width: 600px) {
+		max-width: 10rem !important;
+	}
 `;
 
 //create and import Image
@@ -41,6 +50,6 @@ export const Title = styled.h2`
 	font-size: 4rem;
 
 	@media screen and (max-width: 600px) {
-		font-size: 1.5rem;
+		font-size: 3rem !important;
 	}
 `;
